@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?_route=$1 [NC,L,QSA]
+
+# fix heroku weird redirect if a folder was match
+DirectorySlash Off
